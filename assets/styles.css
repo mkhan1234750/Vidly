@@ -1,0 +1,16 @@
+.a_class {
+    color: rgb(48, 214, 158);
+    size: 0lh;
+}
+
+.banner {
+    height: auto;
+    max-width: 100%;
+}
+
+.front-top {
+    background-color: #0f121f;
+    background-image: url(stars.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}

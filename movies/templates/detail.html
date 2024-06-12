@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}About {{ movie.title }}{% endblock %}
+
+{% block content %}
+<dl>
+    <dt>Title</dt>
+    <dd>{{ movie.title }}</dd>
+    <dt>Genre</dt>
+    <dd>{{ movie.genre }}</dd>
+    <dt>Release Year</dt>
+    <dd>{{ movie.release_year }}</dd>
+    <dt>About the movie</dt>
+    <dd>{{ movie.about }}</dd>
+    <dt>Image</dt>
+    <dd>
+        <section>
+            <img class="banner" src="{{ movie.movie_image.url }}" alt="{{ movie.title }}">
+        </section>
+    </dd>
+</dl>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Movies{% endblock %}
+
+{% block content %}
+<br>
+<div class="container-md">
+    <h1 class="display-5">Our movies</h1>
+    <p>Our collection of movies for you to choose. Scroll down if you must.</p>
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Release Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for movie in movies %}
+            <tr>
+                <td>
+                    <a class="link-offset-1" href="{% url "movies:detail" movie.id %}">{{ movie.title }}</a>
+                </td>
+                <td>{{ movie.genre }}</td>
+                <td>{{ movie.release_year }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
